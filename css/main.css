@@ -1,6 +1,23 @@
+@font-face {
+  font-family: pixel;
+  src: url(../fonts/pixel.ttf); }
+@font-face {
+  font-family: bembo;
+  src: url(../fonts/BemboStd.otf); }
+@keyframes pulsing {
+  0% {
+    font-size: 20px; }
+  33% {
+    font-size: 25px; }
+  66% {
+    font-size: 30px; }
+  100% {
+    font-size: 35px; } }
 body {
-  margin: 0;
+  width: 100%;
+  margin: 0 auto;
   color: white;
+  font-family: bembo;
   background-color: #7BAFD4; }
 
 ::-webkit-scrollbar {
@@ -15,17 +32,12 @@ body {
     margin: 0 auto;
     padding-top: 100px; }
 
-@keyframes pulsing {
-  0% {
-    font-size: 20px; }
-  33% {
-    font-size: 25px; }
-  66% {
-    font-size: 30px; }
-  100% {
-    font-size: 35px; } }
-h1 {
-  font-size: 50px; }
+#logo {
+  width: 200px; }
+
+#header {
+  font-size: 50px;
+  font-family: pixel; }
 
 .paa {
   margin-top: 40px;
@@ -55,7 +67,7 @@ h1 {
   margin: 0 auto;
   width: 100%;
   background-color: white;
-  height: 50vh;
+  height: 69vh;
   border-bottom: 2px solid black;
   border-top: 2px solid black; }
   #map #LocateButton {
