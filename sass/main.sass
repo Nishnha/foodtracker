@@ -1,5 +1,75 @@
+$carolina-blue: #7BAFD4
+
+body
+  margin: 0
+  color: white
+  background-color: $carolina-blue
+
+::-webkit-scrollbar
+  width: 0px
+
+@mixin page($bg-color)
+  min-height: 100vh
+  background-color: $bg-color
+  margin: 0 auto
+
+#info-page
+  @include page($carolina-blue)
+  #info
+    text-align: center
+    margin: 0 auto
+    padding-top: 100px
+    
+@keyframes pulsing
+  0%
+    font-size: 20px
+  33%
+    font-size: 25px
+  66%
+    font-size: 30px
+  100%
+    font-size: 35px
+
+h1
+  font-size: 50px
+.paa
+  margin-top: 40px
+  font-size: 24px
+.comb
+  margin-top: 160px
+  font-size: 28px
+.p-last
+  position: absolute
+  bottom: 10px
+  right: 0
+  left: 0
+  margin-top: 70px
+  animation: pulsing infinite 1.5s alternate linear
+  a
+    color: white
+    text-decoration: none
+
+#map-page
+  @include page(#814845)
+
 #map
   margin: 0 auto
-  width: 50%
-  height: 50%
-  border: 2px solid black
+  width: 100%
+  background-color: white
+  height: 50vh
+  border-bottom: 2px solid black
+  border-top: 2px solid black
+  #LocateButton
+    position: relative
+    z-index: 100
+    top: 90px
+    left: 19px
+
+.map
+  .esriMapContainer
+    top: -34px
+    height: 100vh
+
+#map_root
+  .esriControlsBR
+    display: none
