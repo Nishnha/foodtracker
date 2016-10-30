@@ -80,7 +80,8 @@ body {
     left: 19px; }
 
 .map .esriMapContainer {
-  height: 100vh; }
+  height: 100vh;
+  top: -34px; }
 
 #map_root .esriControlsBR {
   display: none; }
