@@ -19,8 +19,8 @@
             <img id="logo" src="res/logo.png">
             <h1 id="header">FoodTrackr</h1>
             <p class="paa">Do you like food?</p>
-            <p class="paa">Do you like free stuff</p>
-            <p class="paa comb">We combined the two</p>
+            <p class="paa">Do you like free stuff?</p>
+            <p class="paa comb">Cool.<br>We combined the two</p>
             <p class="p-last">
                 <a href="#map-page">Scroll down for more</a>
             </p>
@@ -30,6 +30,7 @@
         <div id="map">
             <div id="LocateButton"></div>
         </div>
+        <h2>Find free food near you</h2>
     </div>
   </body>
 </html>

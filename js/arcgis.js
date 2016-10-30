@@ -2,7 +2,6 @@ var map;
 require([
         "esri/map",
         "esri/dijit/LocateButton",
-        "esri/dijit/OverviewMap",
         "esri/geometry/Point",
         "esri/symbols/SimpleMarkerSymbol",
         "esri/graphic",
@@ -21,15 +20,11 @@ require([
             }, "LocateButton"
         );
 
-        var overviewMap = new OverviewMap({
-            map: map,
-            visible: true
-        });
-
         geoLocate.startup();
-        overviewMap.startup();
 });
 
+
+// Smooth scrolling when going to div
 $(function() {
   $('a[href*="#"]:not([href="#"])').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
