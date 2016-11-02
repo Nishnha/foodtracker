@@ -3,6 +3,7 @@ require([
         "esri/map",
         "esri/dijit/LocateButton",
         "esri/geometry/Point",
+        "esri/layers/CSVlayer",
         "esri/symbols/PictureMarkerSymbol",
         "esri/graphic",
         "esri/dijit/PopupTemplate",
@@ -31,8 +32,19 @@ require([
                 highlightLocation: true
             }, "LocateButton"
         );
+        
+        var request = new esriRequest({
+            url("https://github.com/Nishnha/foodtracker/blob/master/res/Locations%20-%20Sheet1.csv"),
+            handleAs: "text"
+        });
+        request.then(requestSucceeded, requestFailed);
 
-        featureLayer = new FeatureLayer(featureCollection, {
+        function requestSucceeded(data) {
+            
+        }
+
+
+        var featureLayer = new FeatureLayer(featureCollection, {
             id: 'events',
             infoTemplate: popupTemplate
         });
@@ -43,9 +55,9 @@ require([
 
         map.addLayers([featureLayer]);
 
-        //popupTemplate = new PopupTemplate({
+        popupTemplate = new PopupTemplate({
 
-        //});
+        });
         geoLocate.startup();
 
         // Hide the popup if its outside of the map's window
@@ -64,8 +76,6 @@ require([
 
         };
 });
-
-
 
 
 // Smooth scrolling when going to div

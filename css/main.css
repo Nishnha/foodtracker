@@ -14,11 +14,12 @@
   100% {
     font-size: 35px; } }
 body {
+  width: 966px;
   margin: 0 auto;
   text-align: center;
   color: white;
   font-family: bembo;
-  background-color: #7BAFD4; }
+  background-color: black; }
 
 ::-webkit-scrollbar {
   width: 0px; }
@@ -68,7 +69,7 @@ body {
 
 #map {
   margin: 0 auto;
-  width: 100%;
+  width: 966px;
   background-color: white;
   height: 69vh;
   border-bottom: 2px solid black;
